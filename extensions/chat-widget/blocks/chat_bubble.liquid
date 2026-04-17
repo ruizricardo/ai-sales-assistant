@@ -1,0 +1,56 @@
+<div id="ai-chat-widget">
+  <!-- Botón flotante -->
+  <button id="ai-chat-toggle" aria-label="Abrir chat">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+    </svg>
+  </button>
+
+  <!-- Panel del chat -->
+  <div id="ai-chat-panel" class="closed">
+    <div id="ai-chat-header">
+      <span>🛍️ Asistente de tienda</span>
+      <button id="ai-chat-close">✕</button>
+    </div>
+
+    <div id="ai-chat-messages">
+      <div class="ai-message">
+        ¡Hola! ¿En qué puedo ayudarte hoy? Puedes preguntarme sobre nuestros productos.
+      </div>
+    </div>
+
+    <div id="ai-chat-input-area">
+      <input
+        type="text"
+        id="ai-chat-input"
+        placeholder="Escribí tu pregunta..."
+        autocomplete="off"
+      />
+      <button id="ai-chat-send">→</button>
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="{{ 'chat-widget.css' | asset_url }}">
+<script>
+  window.AI_CHAT_CONFIG = {
+        shopDomain: {{ shop.permanent_domain | json }},
+        backendUrl: {{ settings.backend_url | json }}
+    };
+</script>
+<script src="{{ 'chat-widget.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "AI Chat Widget",
+  "target": "body",
+  "settings": [
+    {
+      "type": "text",
+      "id": "backend_url",
+      "label": "Backend URL",
+      "default": "http://localhost:3001"
+    }
+  ]
+}
+{% endschema %}

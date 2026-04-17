@@ -1,0 +1,10 @@
+api_version = "2024-01"
+
+[[extensions]]
+type = "theme"
+name = "chat-widget"
+handle = "chat-widget"
+uid = "288ab506-3769-fe13-0858-10bbb247f01cb0ff7c2a"
+
+[[extensions.development]]
+root_url = "http://localhost:3001"
