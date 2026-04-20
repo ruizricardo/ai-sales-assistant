@@ -2,7 +2,8 @@
 
 A Shopify app that embeds a conversational AI assistant into any storefront. Customers can ask natural language questions about products and receive intelligent, context-aware recommendations — powered by RAG (Retrieval-Augmented Generation) over the store's product catalog.
 
-![Chat Widget](https://drive.google.com/file/d/1Iwpjm4Rpalqwr7F21VnGvqydV1WDUcYn/view?usp=sharing)
+<img width="978" height="663" alt="widget" src="https://github.com/user-attachments/assets/14d3adbc-2855-46dc-a45f-cf37f65d4f21" />
+
 
 ---
 
